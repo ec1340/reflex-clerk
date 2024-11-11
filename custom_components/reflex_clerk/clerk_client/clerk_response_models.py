@@ -45,7 +45,8 @@ class Verification(pydantic.BaseModel):
         Literal[
             "oauth_google", "oauth_github", "oauth_mock", "admin",
             "phone_code", "email_code", "reset_password_email_code",
-            "web3_metamask_signature", "from_oauth_google", "from_oauth_github"
+            "web3_metamask_signature", "from_oauth_google", "from_oauth_github",
+            "ticket" # add ticket strategy
         ]]
     status: Optional[Literal['unverified', 'verified', 'transferable', 'failed', 'expired']]
     nonce: Optional[str] = None
